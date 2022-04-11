@@ -135,5 +135,10 @@ namespace CardGame2022
         {
             gameController.RestartGame();
         }
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

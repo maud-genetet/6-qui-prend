@@ -44,6 +44,7 @@
             this.labelScore1 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
+            this.QuitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // messageListBox
@@ -221,7 +222,7 @@
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(432, 449);
+            this.buttonRestart.Location = new System.Drawing.Point(432, 408);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(75, 23);
             this.buttonRestart.TabIndex = 15;
@@ -229,11 +230,22 @@
             this.buttonRestart.UseVisualStyleBackColor = true;
             this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
+            // QuitButton
+            // 
+            this.QuitButton.Location = new System.Drawing.Point(432, 449);
+            this.QuitButton.Name = "QuitButton";
+            this.QuitButton.Size = new System.Drawing.Size(75, 23);
+            this.QuitButton.TabIndex = 16;
+            this.QuitButton.Text = "Quitter";
+            this.QuitButton.UseVisualStyleBackColor = true;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 517);
+            this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.labelScore2);
             this.Controls.Add(this.labelScore1);
@@ -277,6 +289,7 @@
         private System.Windows.Forms.Label labelScore1;
         private System.Windows.Forms.Label labelScore2;
         private System.Windows.Forms.Button buttonRestart;
+        private System.Windows.Forms.Button QuitButton;
     }
 }
 

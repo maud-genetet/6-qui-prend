@@ -20,3 +20,14 @@ V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\Ca
 V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
 V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
 V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.AssemblyReference.cache
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.SuggestedBindingRedirects.cache
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.MainWindow.resources
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Properties.Resources.resources
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.GenerateResource.cache
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
+\\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
