@@ -1,0 +1,22 @@
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.AssemblyReference.cache
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.SuggestedBindingRedirects.cache
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.MainWindow.resources
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Properties.Resources.resources
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.GenerateResource.cache
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
+Z:\Documents\Visual Studio 2022\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.AssemblyReference.cache
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.SuggestedBindingRedirects.cache
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.MainWindow.resources
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Properties.Resources.resources
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.GenerateResource.cache
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
+V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
