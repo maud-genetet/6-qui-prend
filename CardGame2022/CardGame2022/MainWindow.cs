@@ -17,8 +17,11 @@ namespace CardGame2022
     {
         #region Association attributes
         private readonly GameController gameController;
+        List<List<CardView>> cartViewsPlayer;
+        List<List<CardView>> cartViewsRows;
         #endregion
         #region Constructor
+
         internal MainWindow(GameController gameController)
         {
             InitializeComponent();
@@ -32,6 +35,8 @@ namespace CardGame2022
             rowTwoLabel.Visible =
             rowThreeLabel.Visible =
             rowFourLabel.Visible = true;
+            cartViewsRows = new List<List<CardView>>();
+            cartViewsPlayer = new List<List<CardView>>();
         }
         #endregion
         #region Methods called by the controller
@@ -54,6 +59,7 @@ namespace CardGame2022
                     return;
             }
         }
+
         /// <summary>
         /// Method called to display the score in dedicated controls.
         /// </summary>
@@ -94,10 +100,19 @@ namespace CardGame2022
         /// <param name="cards">The list of cards</param>
         internal void UpdateRow(int row, List<int> cards)
         {
+           
             switch (row)
             {
                 case 0:
                     rowOneLabel.Text = CardsHandling.ListOfCardsToString(cards);
+                    CardView cardView = new CardView
+                    {
+                        Position = new System.Drawing.Point(20, 20),
+                        Card = 5
+                    };
+                    List<CardView> rows1 = new List<CardView>();
+                    rows1.Add(cardView);
+                    cartViewsRows.Add(rows1);
                     break;
                 case 1:
                     rowTwoLabel.Text = CardsHandling.ListOfCardsToString(cards);
@@ -111,6 +126,7 @@ namespace CardGame2022
                 default:
                     return;
             }
+            Refresh();
         }
 
         #endregion
@@ -126,8 +142,19 @@ namespace CardGame2022
         }
         private void MainWindow_Paint(object sender, PaintEventArgs e)
         {
+            //On garde !!!//
             int splitX = messageListBox.Left - 10;
             e.Graphics.DrawLine(Pens.Black, new Point(splitX, 0), new Point(splitX, Height));
+            //////////
+            ///
+
+            foreach (List<CardView> cartRow in cartViewsRows)
+            {
+                foreach(CardView cart in cartRow)
+                {
+                    cart.Draw(e);
+                }
+            }
         }
         #endregion
 

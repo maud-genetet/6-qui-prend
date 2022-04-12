@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CardGame2022
+{
+    class CardView
+    {
+        public Point Position;
+        public int Card;
+       // public int Penalite;
+
+        public Size Taille = new Size(10, 20);
+
+        public void Draw(PaintEventArgs e)
+        {
+            Pen blackPen = new Pen(Color.Black, 3);
+
+
+            Rectangle rect = new Rectangle(Position.X, Position.Y, Taille.Width,Taille.Height);
+
+            // Draw rectangle to screen.
+            e.Graphics.DrawRectangle(blackPen, rect);
+            String s = "" + Card;
+            e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X, Position.Y);
+
+        }
+
+
+        public bool Contains(Point p)
+        {
+            Rectangle r = new Rectangle(Position, Taille);    
+            return r.Contains(p);
+        }
+    }
+}

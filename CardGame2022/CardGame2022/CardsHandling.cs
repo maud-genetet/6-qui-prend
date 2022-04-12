@@ -128,6 +128,21 @@ namespace CardGame2022
             }
             return res;
         }
+
+        public static List<CardView> ListOfCardsToList(List<int> cards, int numberRow)
+        {
+            int i = 1;
+            List<CardView> listCard = new List<CardView>();
+            foreach (int card in cards)
+            {
+                CardView cardView = new CardView
+                {
+                    Position = new System.Drawing.Point(i * 20, numberRow * 20),
+                    Card = card
+                };
+            }
+            return listCard;
+        }
         /// <summary>
         /// A method that display a list of list of cards (rows) as a string
         /// </summary>
