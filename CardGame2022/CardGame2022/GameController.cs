@@ -47,8 +47,9 @@ namespace CardGame2022
             mainWindow.WriteLine(gameLogic.AllRowsToString(allRows));
             for (int i=0; i<allRows.Count; i++)
             {
-                mainWindow.UpdateRow(i, allRows[i]);
+               // mainWindow.UpdateRow(i, allRows[i]);
             }
+            mainWindow.UpdateRow(allRows);
             for (int i = 0; i < gameLogic.GetNumberOfPlayers(); i++)
             {
                 mainWindow.UpdateHand(i, gameLogic.GetCurrentHandForPlayer(i));

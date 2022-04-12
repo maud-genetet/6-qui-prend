@@ -17,8 +17,8 @@ namespace CardGame2022
     {
         #region Association attributes
         private readonly GameController gameController;
-        List<List<CardView>> cartViewsPlayer;
-        List<List<CardView>> cartViewsRows;
+        List<List<CardView>> cardViewsRows = new List<List<CardView>>(4);
+        List<List<CardView>> cardViewsPlayer = new List<List<CardView>>(10);
         #endregion
         #region Constructor
 
@@ -35,8 +35,6 @@ namespace CardGame2022
             rowTwoLabel.Visible =
             rowThreeLabel.Visible =
             rowFourLabel.Visible = true;
-            cartViewsRows = new List<List<CardView>>();
-            cartViewsPlayer = new List<List<CardView>>();
         }
         #endregion
         #region Methods called by the controller
@@ -96,35 +94,27 @@ namespace CardGame2022
         /// <summary>
         /// Method called by the controler to update one row of cards on the table
         /// </summary>
-        /// <param name="row">The number of the row</param>
-        /// <param name="cards">The list of cards</param>
-        internal void UpdateRow(int row, List<int> cards)
+        /// <param name="cards">The list of list of cards</param>
+        internal void UpdateRow(List<List<int>> cards)
         {
-           
-            switch (row)
+            cardViewsRows.Clear();
+            int numberRow = 1;
+            foreach (var cardRow in cards)
             {
-                case 0:
-                    rowOneLabel.Text = CardsHandling.ListOfCardsToString(cards);
+                int i = 1;
+                List<CardView> listCard = new List<CardView>();
+                foreach (int card in cardRow)
+                {
                     CardView cardView = new CardView
                     {
-                        Position = new System.Drawing.Point(20, 20),
-                        Card = 5
+                        Position = new System.Drawing.Point((int)(i * 55), (int)(numberRow * 60)),
+                        Card = card
                     };
-                    List<CardView> rows1 = new List<CardView>();
-                    rows1.Add(cardView);
-                    cartViewsRows.Add(rows1);
-                    break;
-                case 1:
-                    rowTwoLabel.Text = CardsHandling.ListOfCardsToString(cards);
-                    break;
-                case 2:
-                    rowThreeLabel.Text = CardsHandling.ListOfCardsToString(cards);
-                    break;
-                case 3:
-                    rowFourLabel.Text = CardsHandling.ListOfCardsToString(cards);
-                    break;
-                default:
-                    return;
+                    listCard.Add(cardView);
+                    i++;
+                }
+                numberRow++;
+                cardViewsRows.Add(listCard);
             }
             Refresh();
         }
@@ -148,7 +138,7 @@ namespace CardGame2022
             //////////
             ///
 
-            foreach (List<CardView> cartRow in cartViewsRows)
+            foreach (List<CardView> cartRow in cardViewsRows)
             {
                 foreach(CardView cart in cartRow)
                 {

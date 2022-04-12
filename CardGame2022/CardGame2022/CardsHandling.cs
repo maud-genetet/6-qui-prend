@@ -18,7 +18,7 @@ namespace CardGame2022
         public static readonly int maxValue = 104;
         public static readonly int numberOfRows = 4;
         public static readonly int maxInRow = 5;
-        public static readonly int numberOfCardsInEachHand = 1;
+        public static readonly int numberOfCardsInEachHand = 10;
         private static readonly Random random = new Random();
         #endregion
         #region Public class methods for cards
@@ -129,20 +129,7 @@ namespace CardGame2022
             return res;
         }
 
-        public static List<CardView> ListOfCardsToList(List<int> cards, int numberRow)
-        {
-            int i = 1;
-            List<CardView> listCard = new List<CardView>();
-            foreach (int card in cards)
-            {
-                CardView cardView = new CardView
-                {
-                    Position = new System.Drawing.Point(i * 20, numberRow * 20),
-                    Card = card
-                };
-            }
-            return listCard;
-        }
+        
         /// <summary>
         /// A method that display a list of list of cards (rows) as a string
         /// </summary>

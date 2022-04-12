@@ -31,3 +31,14 @@ V:\Cours\IUT_S2\IHM\CardGame2022_BASEv1.4\CardGame2022\CardGame2022\obj\Debug\Ca
 \\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
 \\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
 \\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.AssemblyReference.cache
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.SuggestedBindingRedirects.cache
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.MainWindow.resources
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Properties.Resources.resources
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.GenerateResource.cache
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
+C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb

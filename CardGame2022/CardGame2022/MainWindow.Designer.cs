@@ -51,82 +51,30 @@
             // 
             this.messageListBox.CausesValidation = false;
             this.messageListBox.FormattingEnabled = true;
-            this.messageListBox.Location = new System.Drawing.Point(557, 24);
-            this.messageListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.messageListBox.ItemHeight = 16;
+            this.messageListBox.Location = new System.Drawing.Point(743, 30);
+            this.messageListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(409, 420);
+            this.messageListBox.Size = new System.Drawing.Size(544, 516);
             this.messageListBox.TabIndex = 1;
             // 
             // entryTextBox
             // 
-            this.entryTextBox.Location = new System.Drawing.Point(557, 456);
-            this.entryTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.entryTextBox.Location = new System.Drawing.Point(743, 561);
+            this.entryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(409, 20);
+            this.entryTextBox.Size = new System.Drawing.Size(544, 22);
             this.entryTextBox.TabIndex = 0;
             this.entryTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryTextBox_KeyDown);
-            // 
-            // rowOneLabel
-            // 
-            this.rowOneLabel.AutoSize = true;
-            this.rowOneLabel.BackColor = System.Drawing.Color.Red;
-            this.rowOneLabel.ForeColor = System.Drawing.SystemColors.Info;
-            this.rowOneLabel.Location = new System.Drawing.Point(14, 24);
-            this.rowOneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rowOneLabel.Name = "rowOneLabel";
-            this.rowOneLabel.Size = new System.Drawing.Size(22, 13);
-            this.rowOneLabel.TabIndex = 2;
-            this.rowOneLabel.Text = "     ";
-            this.rowOneLabel.Visible = false;
-            // 
-            // rowTwoLabel
-            // 
-            this.rowTwoLabel.AutoSize = true;
-            this.rowTwoLabel.BackColor = System.Drawing.Color.Salmon;
-            this.rowTwoLabel.ForeColor = System.Drawing.SystemColors.Info;
-            this.rowTwoLabel.Location = new System.Drawing.Point(14, 46);
-            this.rowTwoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rowTwoLabel.Name = "rowTwoLabel";
-            this.rowTwoLabel.Size = new System.Drawing.Size(22, 13);
-            this.rowTwoLabel.TabIndex = 3;
-            this.rowTwoLabel.Text = "     ";
-            this.rowTwoLabel.Visible = false;
-            // 
-            // rowThreeLabel
-            // 
-            this.rowThreeLabel.AutoSize = true;
-            this.rowThreeLabel.BackColor = System.Drawing.Color.Coral;
-            this.rowThreeLabel.ForeColor = System.Drawing.SystemColors.Info;
-            this.rowThreeLabel.Location = new System.Drawing.Point(14, 70);
-            this.rowThreeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rowThreeLabel.Name = "rowThreeLabel";
-            this.rowThreeLabel.Size = new System.Drawing.Size(22, 13);
-            this.rowThreeLabel.TabIndex = 4;
-            this.rowThreeLabel.Text = "     ";
-            this.rowThreeLabel.Visible = false;
-            // 
-            // rowFourLabel
-            // 
-            this.rowFourLabel.AutoSize = true;
-            this.rowFourLabel.BackColor = System.Drawing.Color.LightSalmon;
-            this.rowFourLabel.ForeColor = System.Drawing.SystemColors.Info;
-            this.rowFourLabel.Location = new System.Drawing.Point(14, 93);
-            this.rowFourLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rowFourLabel.Name = "rowFourLabel";
-            this.rowFourLabel.Size = new System.Drawing.Size(22, 13);
-            this.rowFourLabel.TabIndex = 5;
-            this.rowFourLabel.Text = "     ";
-            this.rowFourLabel.Visible = false;
             // 
             // playerOneHandLabel
             // 
             this.playerOneHandLabel.AutoSize = true;
             this.playerOneHandLabel.BackColor = System.Drawing.Color.Lime;
             this.playerOneHandLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.playerOneHandLabel.Location = new System.Drawing.Point(14, 259);
-            this.playerOneHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerOneHandLabel.Location = new System.Drawing.Point(19, 319);
             this.playerOneHandLabel.Name = "playerOneHandLabel";
-            this.playerOneHandLabel.Size = new System.Drawing.Size(22, 13);
+            this.playerOneHandLabel.Size = new System.Drawing.Size(22, 16);
             this.playerOneHandLabel.TabIndex = 6;
             this.playerOneHandLabel.Text = "     ";
             this.playerOneHandLabel.Visible = false;
@@ -136,10 +84,9 @@
             this.playerTwoHandLabel.AutoSize = true;
             this.playerTwoHandLabel.BackColor = System.Drawing.Color.PaleGreen;
             this.playerTwoHandLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.playerTwoHandLabel.Location = new System.Drawing.Point(14, 322);
-            this.playerTwoHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerTwoHandLabel.Location = new System.Drawing.Point(19, 396);
             this.playerTwoHandLabel.Name = "playerTwoHandLabel";
-            this.playerTwoHandLabel.Size = new System.Drawing.Size(22, 13);
+            this.playerTwoHandLabel.Size = new System.Drawing.Size(22, 16);
             this.playerTwoHandLabel.TabIndex = 7;
             this.playerTwoHandLabel.Text = "     ";
             this.playerTwoHandLabel.Visible = false;
@@ -149,10 +96,9 @@
             this.playerOneScoreLabel.AutoSize = true;
             this.playerOneScoreLabel.BackColor = System.Drawing.Color.Turquoise;
             this.playerOneScoreLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.playerOneScoreLabel.Location = new System.Drawing.Point(14, 459);
-            this.playerOneScoreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerOneScoreLabel.Location = new System.Drawing.Point(19, 565);
             this.playerOneScoreLabel.Name = "playerOneScoreLabel";
-            this.playerOneScoreLabel.Size = new System.Drawing.Size(25, 13);
+            this.playerOneScoreLabel.Size = new System.Drawing.Size(25, 16);
             this.playerOneScoreLabel.TabIndex = 8;
             this.playerOneScoreLabel.Text = "      ";
             this.playerOneScoreLabel.Visible = false;
@@ -162,10 +108,9 @@
             this.playerTwoScoreLabel.AutoSize = true;
             this.playerTwoScoreLabel.BackColor = System.Drawing.Color.LightSeaGreen;
             this.playerTwoScoreLabel.ForeColor = System.Drawing.Color.DarkOrange;
-            this.playerTwoScoreLabel.Location = new System.Drawing.Point(271, 459);
-            this.playerTwoScoreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerTwoScoreLabel.Location = new System.Drawing.Point(361, 565);
             this.playerTwoScoreLabel.Name = "playerTwoScoreLabel";
-            this.playerTwoScoreLabel.Size = new System.Drawing.Size(25, 13);
+            this.playerTwoScoreLabel.Size = new System.Drawing.Size(25, 16);
             this.playerTwoScoreLabel.TabIndex = 9;
             this.playerTwoScoreLabel.Text = "      ";
             this.playerTwoScoreLabel.Visible = false;
@@ -174,9 +119,10 @@
             // 
             this.labelRowTable.AutoSize = true;
             this.labelRowTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRowTable.Location = new System.Drawing.Point(12, 9);
+            this.labelRowTable.Location = new System.Drawing.Point(16, 11);
+            this.labelRowTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRowTable.Name = "labelRowTable";
-            this.labelRowTable.Size = new System.Drawing.Size(99, 13);
+            this.labelRowTable.Size = new System.Drawing.Size(125, 17);
             this.labelRowTable.TabIndex = 10;
             this.labelRowTable.Text = "row on the table";
             // 
@@ -184,9 +130,10 @@
             // 
             this.labelCards1.AutoSize = true;
             this.labelCards1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCards1.Location = new System.Drawing.Point(14, 235);
+            this.labelCards1.Location = new System.Drawing.Point(19, 289);
+            this.labelCards1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCards1.Name = "labelCards1";
-            this.labelCards1.Size = new System.Drawing.Size(87, 13);
+            this.labelCards1.Size = new System.Drawing.Size(112, 17);
             this.labelCards1.TabIndex = 11;
             this.labelCards1.Text = "cards player 1";
             // 
@@ -194,9 +141,10 @@
             // 
             this.labelCards2.AutoSize = true;
             this.labelCards2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCards2.Location = new System.Drawing.Point(14, 300);
+            this.labelCards2.Location = new System.Drawing.Point(19, 369);
+            this.labelCards2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCards2.Name = "labelCards2";
-            this.labelCards2.Size = new System.Drawing.Size(87, 13);
+            this.labelCards2.Size = new System.Drawing.Size(112, 17);
             this.labelCards2.TabIndex = 12;
             this.labelCards2.Text = "cards player 2";
             // 
@@ -204,9 +152,10 @@
             // 
             this.labelScore1.AutoSize = true;
             this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore1.Location = new System.Drawing.Point(12, 431);
+            this.labelScore1.Location = new System.Drawing.Point(16, 530);
+            this.labelScore1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(87, 13);
+            this.labelScore1.Size = new System.Drawing.Size(112, 17);
             this.labelScore1.TabIndex = 13;
             this.labelScore1.Text = "score player 1";
             // 
@@ -214,17 +163,19 @@
             // 
             this.labelScore2.AutoSize = true;
             this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore2.Location = new System.Drawing.Point(271, 431);
+            this.labelScore2.Location = new System.Drawing.Point(361, 530);
+            this.labelScore2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelScore2.Name = "labelScore2";
-            this.labelScore2.Size = new System.Drawing.Size(87, 13);
+            this.labelScore2.Size = new System.Drawing.Size(112, 17);
             this.labelScore2.TabIndex = 14;
             this.labelScore2.Text = "score player 2";
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(432, 408);
+            this.buttonRestart.Location = new System.Drawing.Point(576, 502);
+            this.buttonRestart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRestart.Name = "buttonRestart";
-            this.buttonRestart.Size = new System.Drawing.Size(75, 23);
+            this.buttonRestart.Size = new System.Drawing.Size(100, 28);
             this.buttonRestart.TabIndex = 15;
             this.buttonRestart.Text = "Restart";
             this.buttonRestart.UseVisualStyleBackColor = true;
@@ -232,9 +183,10 @@
             // 
             // QuitButton
             // 
-            this.QuitButton.Location = new System.Drawing.Point(432, 449);
+            this.QuitButton.Location = new System.Drawing.Point(576, 553);
+            this.QuitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.QuitButton.Name = "QuitButton";
-            this.QuitButton.Size = new System.Drawing.Size(75, 23);
+            this.QuitButton.Size = new System.Drawing.Size(100, 28);
             this.QuitButton.TabIndex = 16;
             this.QuitButton.Text = "Quitter";
             this.QuitButton.UseVisualStyleBackColor = true;
@@ -242,9 +194,9 @@
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 517);
+            this.ClientSize = new System.Drawing.Size(1283, 636);
             this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.labelScore2);
@@ -262,7 +214,7 @@
             this.Controls.Add(this.rowOneLabel);
             this.Controls.Add(this.entryTextBox);
             this.Controls.Add(this.messageListBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainWindow";
             this.Text = "6 nimmt! (IUT version)";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainWindow_Paint);

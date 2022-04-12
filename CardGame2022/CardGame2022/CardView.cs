@@ -14,7 +14,7 @@ namespace CardGame2022
         public int Card;
        // public int Penalite;
 
-        public Size Taille = new Size(10, 20);
+        public Size Taille = new Size(40, 55);
 
         public void Draw(PaintEventArgs e)
         {
@@ -26,7 +26,18 @@ namespace CardGame2022
             // Draw rectangle to screen.
             e.Graphics.DrawRectangle(blackPen, rect);
             String s = "" + Card;
-            e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X, Position.Y);
+            if (Card < 10)
+            {
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X + 11, Position.Y + 17);
+
+            } else if ( 10 <= Card && Card < 100 )
+            {
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X + 6, Position.Y + 17);
+            }
+            else
+            {
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X, Position.Y + 17);
+            }
 
         }
 
