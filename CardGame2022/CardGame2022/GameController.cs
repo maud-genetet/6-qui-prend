@@ -184,7 +184,10 @@ namespace CardGame2022
             mainWindow.DrawHandOfPlayer(cards, player, true);
         }
         private void DisplayNewGame(int numberOfPlayers) => mainWindow.WriteLine("Starting a new game with " + numberOfPlayers + " players.");
-        private void DisplayCardSelectPromptForPlayer(int i) => mainWindow.WriteLine("Player " + i + ", what card do you choose?");
+        private void DisplayCardSelectPromptForPlayer(int i)
+        {
+            mainWindow.WriteLine("Player " + i + ", what card do you choose?");
+        }
         #endregion
         #region Methods by me
         /// <summary>

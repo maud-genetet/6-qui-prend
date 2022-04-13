@@ -45,18 +45,18 @@
             this.messageListBox.CausesValidation = false;
             this.messageListBox.FormattingEnabled = true;
             this.messageListBox.ItemHeight = 16;
-            this.messageListBox.Location = new System.Drawing.Point(956, 30);
+            this.messageListBox.Location = new System.Drawing.Point(1277, 30);
             this.messageListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(331, 516);
+            this.messageListBox.Size = new System.Drawing.Size(10, 516);
             this.messageListBox.TabIndex = 1;
             // 
             // entryTextBox
             // 
-            this.entryTextBox.Location = new System.Drawing.Point(956, 561);
+            this.entryTextBox.Location = new System.Drawing.Point(1277, 561);
             this.entryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(331, 22);
+            this.entryTextBox.Size = new System.Drawing.Size(10, 22);
             this.entryTextBox.TabIndex = 0;
             this.entryTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryTextBox_KeyDown);
             // 
@@ -174,6 +174,8 @@
             this.Name = "MainWindow";
             this.Text = "6 nimmt! (IUT version)";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainWindow_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainWindow_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainWindow_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

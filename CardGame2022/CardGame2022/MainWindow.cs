@@ -19,6 +19,10 @@ namespace CardGame2022
         private readonly GameController gameController;
         List<List<CardView>> cardViewsRows = new List<List<CardView>>(4);
         List<CardView> cardViewsPlayer = new List<CardView>(10);
+        Rectangle rowHover = Rectangle.Empty;
+        CardView cardView;
+        int numberOfRow;
+        Boolean chooseRow = false;
         #endregion
         #region Constructor
 
@@ -41,12 +45,15 @@ namespace CardGame2022
 
         internal void DrawHandOfPlayer(List<int> cards, int player, bool onView)
         {
+
             if (onView)
             {
+                chooseRow = false;
                 labelCards1.Text = "Hand of the player : " + (int)(player + 1);
             }
             else
             {
+                chooseRow = true;
                 labelCards1.Text = "Player " + (int)(player + 1 ) + " please, chose a row.";
             }
             cardViewsPlayer.Clear();
@@ -150,6 +157,7 @@ namespace CardGame2022
             e.Graphics.FillRectangle(Brushes.DarkRed, haut);
             //////////
             ///
+            e.Graphics.FillRectangle(Brushes.Green, rowHover);
 
             foreach (List<CardView> cartRow in cardViewsRows)
             {
@@ -173,6 +181,74 @@ namespace CardGame2022
         private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MainWindow_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!chooseRow)
+            {
+                Boolean inCard = false;
+                foreach (CardView card in cardViewsPlayer)
+                {
+                    if (card.Contains(e.Location))
+                    {
+                        cardView = card;
+                        inCard = true;
+                    }
+                }
+                if (inCard)
+                {
+                    gameController.Interpret(cardView.Card.ToString());
+                }
+            }
+            else
+            {
+                Boolean inRow = false;
+                int i = 0;
+                foreach (List<CardView> row in cardViewsRows)
+                {
+                    if (row[0].Position.Y < e.Location.Y && row[0].Position.Y+row[0].Taille.Height > e.Location.Y)
+                    {
+                        inRow = true;
+                        numberOfRow = i;
+                    }
+                    i++;
+                }
+                if (inRow)
+                {
+                    gameController.Interpret(numberOfRow.ToString());
+                }
+            }
+        }
+
+        private void MainWindow_MouseMove(object sender, MouseEventArgs e)
+        {
+            rowHover = Rectangle.Empty;
+            if (!chooseRow)
+            {
+                foreach (CardView card in cardViewsPlayer)
+                {
+                    if (card.Contains(e.Location))
+                    {
+                        card.Position = new Point(card.Position.X, 410);
+                    }
+                    else
+                    {
+                        card.Position = new Point(card.Position.X, 420);
+                    }
+                }
+            }
+            else
+            {
+                foreach (List<CardView> row in cardViewsRows)
+                {
+                    if (row[0].Position.Y < e.Location.Y && row[0].Position.Y + row[0].Taille.Height > e.Location.Y)
+                    {
+                        rowHover = new Rectangle(20, row[0].Position.Y-2, this.ClientSize.Width-40, row[0].Taille.Height+4);
+                    }
+                }
+            }
+            Refresh();
         }
     }
 }
