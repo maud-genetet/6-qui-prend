@@ -88,7 +88,7 @@
             // 
             this.labelRowTable.AutoSize = true;
             this.labelRowTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRowTable.Location = new System.Drawing.Point(19, 116);
+            this.labelRowTable.Location = new System.Drawing.Point(19, 101);
             this.labelRowTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRowTable.Name = "labelRowTable";
             this.labelRowTable.Size = new System.Drawing.Size(125, 17);
@@ -98,8 +98,9 @@
             // labelCards1
             // 
             this.labelCards1.AutoSize = true;
+            this.labelCards1.BackColor = System.Drawing.Color.Transparent;
             this.labelCards1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCards1.Location = new System.Drawing.Point(19, 483);
+            this.labelCards1.Location = new System.Drawing.Point(19, 493);
             this.labelCards1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCards1.Name = "labelCards1";
             this.labelCards1.Size = new System.Drawing.Size(112, 17);
@@ -134,7 +135,7 @@
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(572, 25);
+            this.buttonRestart.Location = new System.Drawing.Point(1022, 25);
             this.buttonRestart.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(100, 28);
@@ -145,7 +146,7 @@
             // 
             // QuitButton
             // 
-            this.QuitButton.Location = new System.Drawing.Point(696, 25);
+            this.QuitButton.Location = new System.Drawing.Point(1143, 25);
             this.QuitButton.Margin = new System.Windows.Forms.Padding(4);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(100, 28);

@@ -64,7 +64,7 @@ namespace CardGame2022
             {
                 CardView cardView = new CardView
                 {
-                    Position = new System.Drawing.Point((int)(i * 55), (int)(420)),
+                    Position = new System.Drawing.Point((int)(i * 55), (int)(430)),
                     Card = card
                 };
                 cardViewsPlayer.Add(cardView);
@@ -122,7 +122,7 @@ namespace CardGame2022
                 {
                     CardView cardView = new CardView
                     {
-                        Position = new System.Drawing.Point((int)(i * 55), (int)(numberRow * 60 + 70)),
+                        Position = new System.Drawing.Point((int)(i * 55), (int)(numberRow * 60 + 55)),
                         Card = card
                     };
                     listCard.Add(cardView);
@@ -138,12 +138,12 @@ namespace CardGame2022
         #region Event handling
         private void EntryTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode.Equals(Keys.Enter))
+            /*if (e.KeyCode.Equals(Keys.Enter))
             {
                 e.SuppressKeyPress = true; // Or beep.
                 gameController.Interpret(entryTextBox.Text);
                 entryTextBox.Text = "";
-            }
+            }*/
         }
         private void MainWindow_Paint(object sender, PaintEventArgs e)
         {
@@ -152,12 +152,14 @@ namespace CardGame2022
             e.Graphics.DrawLine(Pens.Black, new Point(splitX, 0), new Point(splitX, Height));
 
             Rectangle haut = new Rectangle(0, 0, this.ClientSize.Width, 60);
+            Rectangle bas = new Rectangle(0, this.ClientSize.Height-140, this.ClientSize.Width, 140);
 
             // Draw rectangle to screen.
             e.Graphics.FillRectangle(Brushes.DarkRed, haut);
+            e.Graphics.FillRectangle(Brushes.PeachPuff, bas);
             //////////
             ///
-            e.Graphics.FillRectangle(Brushes.Green, rowHover);
+            e.Graphics.FillRectangle(Brushes.OliveDrab, rowHover);
 
             foreach (List<CardView> cartRow in cardViewsRows)
             {
@@ -230,11 +232,11 @@ namespace CardGame2022
                 {
                     if (card.Contains(e.Location))
                     {
-                        card.Position = new Point(card.Position.X, 410);
+                        card.Position = new Point(card.Position.X, 420);
                     }
                     else
                     {
-                        card.Position = new Point(card.Position.X, 420);
+                        card.Position = new Point(card.Position.X, 430);
                     }
                 }
             }
