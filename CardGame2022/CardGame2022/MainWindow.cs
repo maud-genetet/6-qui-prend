@@ -29,6 +29,7 @@ namespace CardGame2022
             gameController.StartMeUp(this);
             playerOneScoreLabel.Visible =
             playerTwoScoreLabel.Visible = true;
+            DoubleBuffered = true;
         }
         #endregion
         #region Methods called by the controller
@@ -37,21 +38,6 @@ namespace CardGame2022
         /// </summary>
         /// <param name="player">The player selected.</param>
         /// <param name="cards">The cards to display.</param>
-        internal void UpdateHand(int player, List<int> cards)
-        {
-
-            switch (player)
-            {
-                case 0:
-                    //playerOneHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
-                    break;
-                case 1:
-           //         playerTwoHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
-                    break;
-                default:
-                    return;
-            }
-        }
 
         internal void DrawHandOfPlayer(List<int> cards, int player, bool onView)
         {
@@ -64,6 +50,8 @@ namespace CardGame2022
                 labelCards1.Text = "Player " + (int)(player + 1 ) + " please, chose a row.";
             }
             cardViewsPlayer.Clear();
+            Refresh();
+            MessageBox.Show("Player " + (int)(player + 1) + ", this is your turn.");
             int i = 1;
             foreach (int card in cards)
             {

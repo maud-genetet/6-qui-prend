@@ -179,7 +179,9 @@ namespace CardGame2022
         {
             mainWindow.WriteLine("Player " + player + ", this is your hand:");
             mainWindow.WriteLine(CardsHandling.ListOfCardsToString(gameLogic.GetCurrentHandForPlayer(player)));
-            mainWindow.DrawHandOfPlayer(gameLogic.GetCurrentHandForPlayer(player), player, true);
+            List<int> cards = gameLogic.GetCurrentHandForPlayer(player);
+            cards.Sort();
+            mainWindow.DrawHandOfPlayer(cards, player, true);
         }
         private void DisplayNewGame(int numberOfPlayers) => mainWindow.WriteLine("Starting a new game with " + numberOfPlayers + " players.");
         private void DisplayCardSelectPromptForPlayer(int i) => mainWindow.WriteLine("Player " + i + ", what card do you choose?");
