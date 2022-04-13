@@ -18,25 +18,22 @@ namespace CardGame2022
 
         public void Draw(PaintEventArgs e)
         {
-            Pen blackPen = new Pen(Color.Black, 3);
-
-
             Rectangle rect = new Rectangle(Position.X, Position.Y, Taille.Width,Taille.Height);
 
             // Draw rectangle to screen.
-            e.Graphics.DrawRectangle(blackPen, rect);
+            e.Graphics.FillRectangle(Brushes.DarkRed, rect);
             String s = "" + Card;
             if (Card < 10)
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X + 11, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 11, Position.Y + 17);
 
             } else if ( 10 <= Card && Card < 100 )
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X + 6, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 6, Position.Y + 17);
             }
             else
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.Black, Position.X, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X, Position.Y + 17);
             }
 
         }

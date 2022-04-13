@@ -46,16 +46,11 @@ namespace CardGame2022
             mainWindow.WriteLine("All rows on the table:");
             mainWindow.WriteLine(gameLogic.AllRowsToString(allRows));
             for (int i=0; i<allRows.Count; i++)
-            {
-               // mainWindow.UpdateRow(i, allRows[i]);
-            }
             mainWindow.UpdateRow(allRows);
             for (int i = 0; i < gameLogic.GetNumberOfPlayers(); i++)
             {
-                mainWindow.UpdateHand(i, gameLogic.GetCurrentHandForPlayer(i));
                 mainWindow.UpdateScore(i, gameLogic.GetCurrentScoreForPlayer(i));
             }
-            
         }
         /// <summary>
         /// Method called when a rubber has ended to display the scores.
@@ -173,7 +168,10 @@ namespace CardGame2022
         /// </summary>
         /// <param name="player">The player involved.</param>
         internal void AskPlayerForRow(int player)
-        => mainWindow.WriteLine("Player " + player + ", your card is lower than all rows. Please pick a row (0-3) to collect.");
+        {
+            mainWindow.WriteLine("Player " + player + ", your card is lower than all rows. Please pick a row (0-3) to collect.");
+            mainWindow.DrawHandOfPlayer(new List<int>(), player, false);
+        }
         #endregion
         #region Private methods
 
@@ -181,6 +179,7 @@ namespace CardGame2022
         {
             mainWindow.WriteLine("Player " + player + ", this is your hand:");
             mainWindow.WriteLine(CardsHandling.ListOfCardsToString(gameLogic.GetCurrentHandForPlayer(player)));
+            mainWindow.DrawHandOfPlayer(gameLogic.GetCurrentHandForPlayer(player), player, true);
         }
         private void DisplayNewGame(int numberOfPlayers) => mainWindow.WriteLine("Starting a new game with " + numberOfPlayers + " players.");
         private void DisplayCardSelectPromptForPlayer(int i) => mainWindow.WriteLine("Player " + i + ", what card do you choose?");

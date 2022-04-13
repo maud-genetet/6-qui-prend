@@ -18,7 +18,7 @@ namespace CardGame2022
         #region Association attributes
         private readonly GameController gameController;
         List<List<CardView>> cardViewsRows = new List<List<CardView>>(4);
-        List<List<CardView>> cardViewsPlayer = new List<List<CardView>>(10);
+        List<CardView> cardViewsPlayer = new List<CardView>(10);
         #endregion
         #region Constructor
 
@@ -27,14 +27,8 @@ namespace CardGame2022
             InitializeComponent();
             this.gameController = gameController;
             gameController.StartMeUp(this);
-            playerOneHandLabel.Visible =
             playerOneScoreLabel.Visible =
-            playerTwoHandLabel.Visible =
-            playerTwoScoreLabel.Visible =
-            rowOneLabel.Visible =
-            rowTwoLabel.Visible =
-            rowThreeLabel.Visible =
-            rowFourLabel.Visible = true;
+            playerTwoScoreLabel.Visible = true;
         }
         #endregion
         #region Methods called by the controller
@@ -45,17 +39,43 @@ namespace CardGame2022
         /// <param name="cards">The cards to display.</param>
         internal void UpdateHand(int player, List<int> cards)
         {
+
             switch (player)
             {
                 case 0:
-                    playerOneHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
+                    //playerOneHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
                     break;
                 case 1:
-                    playerTwoHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
+           //         playerTwoHandLabel.Text = CardsHandling.ListOfCardsToString(cards);
                     break;
                 default:
                     return;
             }
+        }
+
+        internal void DrawHandOfPlayer(List<int> cards, int player, bool onView)
+        {
+            if (onView)
+            {
+                labelCards1.Text = "Hand of the player : " + (int)(player + 1);
+            }
+            else
+            {
+                labelCards1.Text = "Player " + (int)(player + 1 ) + " please, chose a row.";
+            }
+            cardViewsPlayer.Clear();
+            int i = 1;
+            foreach (int card in cards)
+            {
+                CardView cardView = new CardView
+                {
+                    Position = new System.Drawing.Point((int)(i * 55), (int)(420)),
+                    Card = card
+                };
+                cardViewsPlayer.Add(cardView);
+                i++;
+            }
+            Refresh();
         }
 
         /// <summary>
@@ -107,7 +127,7 @@ namespace CardGame2022
                 {
                     CardView cardView = new CardView
                     {
-                        Position = new System.Drawing.Point((int)(i * 55), (int)(numberRow * 60)),
+                        Position = new System.Drawing.Point((int)(i * 55), (int)(numberRow * 60 + 70)),
                         Card = card
                     };
                     listCard.Add(cardView);
@@ -135,6 +155,11 @@ namespace CardGame2022
             //On garde !!!//
             int splitX = messageListBox.Left - 10;
             e.Graphics.DrawLine(Pens.Black, new Point(splitX, 0), new Point(splitX, Height));
+
+            Rectangle haut = new Rectangle(0, 0, this.ClientSize.Width, 60);
+
+            // Draw rectangle to screen.
+            e.Graphics.FillRectangle(Brushes.DarkRed, haut);
             //////////
             ///
 
@@ -144,6 +169,10 @@ namespace CardGame2022
                 {
                     cart.Draw(e);
                 }
+            }
+            foreach (CardView card in cardViewsPlayer)
+            {
+                card.Draw(e);
             }
         }
         #endregion
