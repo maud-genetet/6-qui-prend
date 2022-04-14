@@ -8,12 +8,15 @@ using System.Windows.Forms;
 
 namespace CardGame2022
 {
-    class CardView
+    internal class CardView
     {
         public Point Position;
         public int Card;
-       // public int Penalite;
-
+        public int Penalite {
+            get {
+                return CardsHandling.MalusValue(Card);
+            }
+        }
         public Size Taille = new Size(40, 55);
 
         public void Draw(PaintEventArgs e)
