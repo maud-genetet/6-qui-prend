@@ -66,7 +66,7 @@ namespace CardGame2022
             for (int i=0; i<playersScores.Count; i++)
             {
                 mainWindow.WriteLine("Player " + i + ": " + playersScores[i]);
-                message += "Player " + i + ": " + playersScores[i] + "\r";
+                message += "Player " + (i+1) + ": " + playersScores[i] + "\r";
             }
             MessageBox.Show(message,"Final scores for this rubber");
         }

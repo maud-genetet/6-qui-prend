@@ -18,7 +18,7 @@ namespace CardGame2022
         public static readonly int maxValue = 104;
         public static readonly int numberOfRows = 4;
         public static readonly int maxInRow = 5;
-        public static readonly int numberOfCardsInEachHand = 10;
+        public static readonly int numberOfCardsInEachHand = 1;
         private static readonly Random random = new Random();
         #endregion
         #region Public class methods for cards
