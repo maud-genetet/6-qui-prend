@@ -19,19 +19,19 @@ namespace CardGame2022
             Application.SetCompatibleTextRenderingDefault(false);
             #endregion
             GameController gameController;
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            bool two = MessageBox.Show("Do you want to play a two-players game?",
-            "", buttons) == DialogResult.Yes;
-            if (two)
+            int nbJoueurs = 0;
+            Menu menu = new Menu(2);
+            if (menu.ShowDialog() == DialogResult.OK)
             {
-                gameController = new GameController(2);   // New GameController, GameLogic
+                nbJoueurs = menu.getNbPlayers();
             }
-            else
-            {
-                gameController = new GameController(1);  // New GameController, GameLogic
-            }
-              
+            gameController = new GameController(nbJoueurs);   // New GameController, GameLogic
+
+
+
+
             Application.Run(new MainWindow(gameController)); // New MainWindow
         }
     }
 }
+

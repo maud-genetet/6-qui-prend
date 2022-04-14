@@ -42,3 +42,14 @@ C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame202
 C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
 C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
 C:\Users\maudg\OneDrive\Documents\projetIHM\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe.config
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.exe
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\bin\Debug\CardGame2022.pdb
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.AssemblyReference.cache
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.SuggestedBindingRedirects.cache
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.MainWindow.resources
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Properties.Resources.resources
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.GenerateResource.cache
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.csproj.CoreCompileInputs.cache
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
+C:\Users\Carole\Documents\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
