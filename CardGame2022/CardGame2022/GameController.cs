@@ -128,10 +128,13 @@ namespace CardGame2022
         internal void DisplayCardsSelected(Dictionary<int, int> cardsSelectedByPlayers)
         {
             mainWindow.WriteLine("The selection has ended, these are the cards played:");
+            List<int> cards = new List<int>(10);
             foreach (int player in cardsSelectedByPlayers.Keys)
             {
                 mainWindow.WriteLine("Player "+player+" has chosen "+ cardsSelectedByPlayers[player]);
+                cards.Add(cardsSelectedByPlayers[player]);
             }
+            mainWindow.DisplayCardsAfterRubber(cards);
             gameLogic.ActOnce();
         }
 
@@ -198,6 +201,14 @@ namespace CardGame2022
         internal void RestartGame()
         {
             gameLogic.RestartGameLogic();
+        }
+        /// <summary>
+        /// Return the number of players
+        /// </summary>
+        /// <returns>int</returns>
+        internal int GetNumberOfPlayers()
+        {
+            return gameLogic.GetNumberOfPlayers();
         }
         #endregion
     }

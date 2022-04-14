@@ -43,10 +43,10 @@
             this.messageListBox.CausesValidation = false;
             this.messageListBox.FormattingEnabled = true;
             this.messageListBox.ItemHeight = 16;
-            this.messageListBox.Location = new System.Drawing.Point(1277, 30);
+            this.messageListBox.Location = new System.Drawing.Point(1063, 62);
             this.messageListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(10, 516);
+            this.messageListBox.Size = new System.Drawing.Size(224, 484);
             this.messageListBox.TabIndex = 1;
             // 
             // entryTextBox

@@ -19,6 +19,7 @@ namespace CardGame2022
         private readonly GameController gameController;
         List<List<CardView>> cardViewsRows = new List<List<CardView>>(4);
         List<CardView> cardViewsPlayer = new List<CardView>(10);
+        List<CardView> cardViewsChooseByPlayers = new List<CardView>(10);
         List<int> scores = new List<int>(10);
         Rectangle rowHover = Rectangle.Empty;
         CardView cardView;
@@ -36,6 +37,25 @@ namespace CardGame2022
         }
         #endregion
         #region Methods called by the controller
+
+        internal void DisplayCardsAfterRubber(List<int> cardsChosen)
+        {
+            cardsChosen.Sort();
+            int a = 1;
+            foreach (int card in cardsChosen)
+            {
+                CardView cardView = new CardView
+                {
+                    Position = new System.Drawing.Point((int)(a * 55 + 500), (int)(200)),
+                    Card = card
+                };
+                cardViewsChooseByPlayers.Add(cardView);
+                a++;
+            }
+            Refresh();
+            MessageBox.Show("All players are choose a card");
+        }
+
         /// <summary>
         /// Method called to display the cards of a player in dedicated controls.
         /// </summary>
@@ -44,11 +64,11 @@ namespace CardGame2022
 
         internal void DrawHandOfPlayer(List<int> cards, int player, bool onView)
         {
-
             if (onView)
             {
                 chooseRow = false;
                 labelCards1.Text = "Hand of the player : " + (int)(player + 1);
+                cardViewsChooseByPlayers.Clear();
             }
             else
             {
@@ -170,6 +190,10 @@ namespace CardGame2022
             {
                 card.Draw(e);
             }
+            foreach (CardView card in cardViewsChooseByPlayers)
+            {
+                card.Draw(e);
+            }
         }
         #endregion
 
@@ -249,11 +273,6 @@ namespace CardGame2022
                 }
             }
             Refresh();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
