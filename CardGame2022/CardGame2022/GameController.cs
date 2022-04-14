@@ -43,14 +43,16 @@ namespace CardGame2022
         /// <param name="allRows">Each row of cards as a list of list of cards.</param>
         internal void UpdateState(List<List<int>> allRows)
         {
+            List<int> scores = new List<int>();
             mainWindow.WriteLine("All rows on the table:");
             mainWindow.WriteLine(gameLogic.AllRowsToString(allRows));
             for (int i=0; i<allRows.Count; i++)
             mainWindow.UpdateRow(allRows);
             for (int i = 0; i < gameLogic.GetNumberOfPlayers(); i++)
             {
-                mainWindow.UpdateScore(i, gameLogic.GetCurrentScoreForPlayer(i));
+                scores.Add(gameLogic.GetCurrentScoreForPlayer(i));
             }
+            mainWindow.UpdateScore(scores);
         }
         /// <summary>
         /// Method called when a rubber has ended to display the scores.

@@ -30,14 +30,12 @@
         {
             this.messageListBox = new System.Windows.Forms.ListBox();
             this.entryTextBox = new System.Windows.Forms.TextBox();
-            this.playerOneScoreLabel = new System.Windows.Forms.Label();
-            this.playerTwoScoreLabel = new System.Windows.Forms.Label();
             this.labelRowTable = new System.Windows.Forms.Label();
             this.labelCards1 = new System.Windows.Forms.Label();
-            this.labelScore1 = new System.Windows.Forms.Label();
-            this.labelScore2 = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
             this.QuitButton = new System.Windows.Forms.Button();
+            this.labelPlayers = new System.Windows.Forms.Label();
+            this.labelScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // messageListBox
@@ -59,30 +57,6 @@
             this.entryTextBox.Size = new System.Drawing.Size(10, 22);
             this.entryTextBox.TabIndex = 0;
             this.entryTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryTextBox_KeyDown);
-            // 
-            // playerOneScoreLabel
-            // 
-            this.playerOneScoreLabel.AutoSize = true;
-            this.playerOneScoreLabel.BackColor = System.Drawing.Color.Transparent;
-            this.playerOneScoreLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.playerOneScoreLabel.Location = new System.Drawing.Point(179, 31);
-            this.playerOneScoreLabel.Name = "playerOneScoreLabel";
-            this.playerOneScoreLabel.Size = new System.Drawing.Size(25, 16);
-            this.playerOneScoreLabel.TabIndex = 8;
-            this.playerOneScoreLabel.Text = "      ";
-            this.playerOneScoreLabel.Visible = false;
-            // 
-            // playerTwoScoreLabel
-            // 
-            this.playerTwoScoreLabel.AutoSize = true;
-            this.playerTwoScoreLabel.BackColor = System.Drawing.Color.Transparent;
-            this.playerTwoScoreLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.playerTwoScoreLabel.Location = new System.Drawing.Point(440, 31);
-            this.playerTwoScoreLabel.Name = "playerTwoScoreLabel";
-            this.playerTwoScoreLabel.Size = new System.Drawing.Size(25, 16);
-            this.playerTwoScoreLabel.TabIndex = 9;
-            this.playerTwoScoreLabel.Text = "      ";
-            this.playerTwoScoreLabel.Visible = false;
             // 
             // labelRowTable
             // 
@@ -107,35 +81,9 @@
             this.labelCards1.TabIndex = 11;
             this.labelCards1.Text = "cards player 1";
             // 
-            // labelScore1
-            // 
-            this.labelScore1.AutoSize = true;
-            this.labelScore1.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelScore1.Location = new System.Drawing.Point(32, 30);
-            this.labelScore1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(112, 17);
-            this.labelScore1.TabIndex = 13;
-            this.labelScore1.Text = "score player 1";
-            // 
-            // labelScore2
-            // 
-            this.labelScore2.AutoSize = true;
-            this.labelScore2.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelScore2.Location = new System.Drawing.Point(244, 30);
-            this.labelScore2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelScore2.Name = "labelScore2";
-            this.labelScore2.Size = new System.Drawing.Size(112, 17);
-            this.labelScore2.TabIndex = 14;
-            this.labelScore2.Text = "score player 2";
-            // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(1022, 25);
+            this.buttonRestart.Location = new System.Drawing.Point(1014, 21);
             this.buttonRestart.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(100, 28);
@@ -146,7 +94,7 @@
             // 
             // QuitButton
             // 
-            this.QuitButton.Location = new System.Drawing.Point(1143, 25);
+            this.QuitButton.Location = new System.Drawing.Point(1131, 21);
             this.QuitButton.Margin = new System.Windows.Forms.Padding(4);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(100, 28);
@@ -155,20 +103,40 @@
             this.QuitButton.UseVisualStyleBackColor = true;
             this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
             // 
+            // labelPlayers
+            // 
+            this.labelPlayers.AutoSize = true;
+            this.labelPlayers.BackColor = System.Drawing.Color.Transparent;
+            this.labelPlayers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPlayers.Location = new System.Drawing.Point(76, 21);
+            this.labelPlayers.Name = "labelPlayers";
+            this.labelPlayers.Size = new System.Drawing.Size(53, 16);
+            this.labelPlayers.TabIndex = 17;
+            this.labelPlayers.Text = "Players";
+            // 
+            // labelScore
+            // 
+            this.labelScore.AutoSize = true;
+            this.labelScore.BackColor = System.Drawing.Color.Transparent;
+            this.labelScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelScore.Location = new System.Drawing.Point(76, 47);
+            this.labelScore.Name = "labelScore";
+            this.labelScore.Size = new System.Drawing.Size(50, 16);
+            this.labelScore.TabIndex = 18;
+            this.labelScore.Text = "Scores";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1283, 636);
+            this.Controls.Add(this.labelScore);
+            this.Controls.Add(this.labelPlayers);
             this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.buttonRestart);
-            this.Controls.Add(this.labelScore2);
-            this.Controls.Add(this.labelScore1);
             this.Controls.Add(this.labelCards1);
             this.Controls.Add(this.labelRowTable);
-            this.Controls.Add(this.playerTwoScoreLabel);
-            this.Controls.Add(this.playerOneScoreLabel);
             this.Controls.Add(this.entryTextBox);
             this.Controls.Add(this.messageListBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,14 +154,12 @@
 
         private System.Windows.Forms.ListBox messageListBox;
         private System.Windows.Forms.TextBox entryTextBox;
-        private System.Windows.Forms.Label playerOneScoreLabel;
-        private System.Windows.Forms.Label playerTwoScoreLabel;
         private System.Windows.Forms.Label labelRowTable;
         private System.Windows.Forms.Label labelCards1;
-        private System.Windows.Forms.Label labelScore1;
-        private System.Windows.Forms.Label labelScore2;
         private System.Windows.Forms.Button buttonRestart;
         private System.Windows.Forms.Button QuitButton;
+        private System.Windows.Forms.Label labelPlayers;
+        private System.Windows.Forms.Label labelScore;
     }
 }
 

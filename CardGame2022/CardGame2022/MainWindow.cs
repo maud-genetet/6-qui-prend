@@ -19,6 +19,7 @@ namespace CardGame2022
         private readonly GameController gameController;
         List<List<CardView>> cardViewsRows = new List<List<CardView>>(4);
         List<CardView> cardViewsPlayer = new List<CardView>(10);
+        List<int> scores = new List<int>(10);
         Rectangle rowHover = Rectangle.Empty;
         CardView cardView;
         int numberOfRow;
@@ -31,8 +32,6 @@ namespace CardGame2022
             InitializeComponent();
             this.gameController = gameController;
             gameController.StartMeUp(this);
-            playerOneScoreLabel.Visible =
-            playerTwoScoreLabel.Visible = true;
             DoubleBuffered = true;
         }
         #endregion
@@ -78,19 +77,9 @@ namespace CardGame2022
         /// </summary>
         /// <param name="player">The player selected.</param>
         /// <param name="score">The score of the player.</param>
-        internal void UpdateScore(int player, int score)
+        internal void UpdateScore(List<int> scoresJoueurs)
         {
-            switch (player)
-            {
-                case 0:
-                    playerOneScoreLabel.Text = score.ToString();
-                    break;
-                case 1:
-                    playerTwoScoreLabel.Text = score.ToString();
-                    break;
-                default:
-                    return;
-            }
+            scores = scoresJoueurs;
         }
         /// <summary>
         /// Method called by the controler whenever some text should be displayed
@@ -159,6 +148,15 @@ namespace CardGame2022
             e.Graphics.FillRectangle(Brushes.PeachPuff, bas);
             //////////
             ///
+
+            int i = 1;
+            foreach (int score in scores)
+            {
+                e.Graphics.DrawString(i.ToString(), new Font("Arial", 15, FontStyle.Regular), Brushes.White, 40 * i + 100, 7);
+                e.Graphics.DrawString(score.ToString() , new Font("Arial", 15, FontStyle.Regular), Brushes.White, 40 * i + 100, 32);
+                i++;
+            }
+
             e.Graphics.FillRectangle(Brushes.OliveDrab, rowHover);
 
             foreach (List<CardView> cartRow in cardViewsRows)
@@ -251,6 +249,11 @@ namespace CardGame2022
                 }
             }
             Refresh();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
