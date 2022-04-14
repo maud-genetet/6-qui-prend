@@ -46,7 +46,7 @@ namespace CardGame2022
             {
                 CardView cardView = new CardView
                 {
-                    Position = new System.Drawing.Point((int)(a * 55 + 500), (int)(200)),
+                    Position = new System.Drawing.Point((int)(a * 55), (int)(570)),
                     Card = card
                 };
                 cardViewsChooseByPlayers.Add(cardView);
@@ -162,10 +162,12 @@ namespace CardGame2022
 
             Rectangle haut = new Rectangle(0, 0, this.ClientSize.Width, 60);
             Rectangle bas = new Rectangle(0, this.ClientSize.Height-140, this.ClientSize.Width, 140);
+            Rectangle basHaut = new Rectangle(0, this.ClientSize.Height - 280, this.ClientSize.Width, 140);
 
             // Draw rectangle to screen.
             e.Graphics.FillRectangle(Brushes.DarkRed, haut);
             e.Graphics.FillRectangle(Brushes.PeachPuff, bas);
+            e.Graphics.FillRectangle(Brushes.LightSalmon, basHaut);
             //////////
             ///
 

@@ -36,6 +36,7 @@
             this.QuitButton = new System.Windows.Forms.Button();
             this.labelPlayers = new System.Windows.Forms.Label();
             this.labelScore = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // messageListBox
@@ -43,10 +44,10 @@
             this.messageListBox.CausesValidation = false;
             this.messageListBox.FormattingEnabled = true;
             this.messageListBox.ItemHeight = 16;
-            this.messageListBox.Location = new System.Drawing.Point(1063, 62);
+            this.messageListBox.Location = new System.Drawing.Point(1277, 62);
             this.messageListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(224, 484);
+            this.messageListBox.Size = new System.Drawing.Size(10, 484);
             this.messageListBox.TabIndex = 1;
             // 
             // entryTextBox
@@ -125,12 +126,26 @@
             this.labelScore.TabIndex = 18;
             this.labelScore.Text = "Scores";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 664);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Cards played by players";
+            // 
             // MainWindow
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1283, 636);
+            this.ClientSize = new System.Drawing.Size(1283, 820);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.labelPlayers);
             this.Controls.Add(this.QuitButton);
@@ -160,6 +175,7 @@
         private System.Windows.Forms.Button QuitButton;
         private System.Windows.Forms.Label labelPlayers;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.Label label1;
     }
 }
 
