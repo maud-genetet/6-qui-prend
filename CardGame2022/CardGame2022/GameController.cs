@@ -69,6 +69,7 @@ namespace CardGame2022
                 message += "Player " + (i+1) + ": " + playersScores[i] + "\r";
             }
             MessageBox.Show(message,"Final scores for this rubber");
+            RestartGame();
         }
         /// <summary>
         /// Method used by the window when a command is entered.
