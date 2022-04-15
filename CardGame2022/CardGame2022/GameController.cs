@@ -48,9 +48,17 @@ namespace CardGame2022
             mainWindow.WriteLine(gameLogic.AllRowsToString(allRows));
             for (int i=0; i<allRows.Count; i++)
             mainWindow.UpdateRow(allRows);
+            Boolean end = false;
             for (int i = 0; i < gameLogic.GetNumberOfPlayers(); i++)
             {
+                if (gameLogic.GetCurrentScoreForPlayer(i) >= 66)
+                {
+                    end = true;
+                }
                 scores.Add(gameLogic.GetCurrentScoreForPlayer(i));
+            }
+            if (end) {
+                DisplayRubberScores(scores);
             }
             mainWindow.UpdateScore(scores);
         }
@@ -60,22 +68,16 @@ namespace CardGame2022
         /// <param name="playersScores">The list of all scores.</param>
         internal void DisplayRubberScores(List<int> playersScores)
         {
-            String message = "";
             List<String> scores = new List<String>();
             mainWindow.WriteLine("Final scores for this rubber:");
             
             for (int i=0; i<playersScores.Count; i++)
             {
                 mainWindow.WriteLine("Player " + i + ": " + playersScores[i]);
-                message += "Player " + (i+1) + ": " + playersScores[i] + "\r";
                 scores.Add("Player " + (i + 1) + ": " + playersScores[i]);
             }
             endGame end = new endGame(scores);
            end.ShowDialog();
-           
-           
-            // end.Show();
-            //MessageBox.Show(message,"Final scores for this rubber");
             RestartGame();
         }
         /// <summary>
