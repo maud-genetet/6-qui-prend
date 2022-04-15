@@ -133,7 +133,6 @@ namespace CardGame2022
                 case State.WaitingForChoiceOfRow:
                     int selectedRow = GetRowForPlayer();
                     int malus = CardsHandling.GetMalusForCards(allRows[selectedRow]);
-                    gameController.DisplayMalusForPlayer(malus, playerChoosingARow);
                     playersScores[playerChoosingARow] += malus;
                     allRows[selectedRow].Clear();
                     state = State.EndTurn;
@@ -202,7 +201,6 @@ namespace CardGame2022
             }
             if (i == cardsSelectedByPlayers.Count)
             {
-                gameController.DisplayEndOfTurnMessage();
                 state = FinishedOrSelection();
                 OneAction();
             }
@@ -251,11 +249,9 @@ namespace CardGame2022
             }
             else
             {
-                gameController.DisplayCardPlayedByPlayer(cardsSelectedByPlayers[i], i);
                 playersHands[i].Remove(cardsSelectedByPlayers[i]);
                 if (malus > 0)
                 {
-                    gameController.DisplayMalusForPlayer(malus, i);
                     playersScores[i]+=malus;
                 } 
                 return true;

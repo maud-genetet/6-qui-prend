@@ -102,20 +102,6 @@ namespace CardGame2022
             scores = scoresJoueurs;
         }
         /// <summary>
-        /// Method called by the controler whenever some text should be displayed
-        /// </summary>
-        /// <param name="s"></param>
-        internal void WriteLine(string s)
-        {
-            List<string> strs = s.Split('\n').ToList();
-            strs.ForEach(str => messageListBox.Items.Add(str));
-            if (messageListBox.Items.Count > 0)
-            {
-                messageListBox.SelectedIndex = messageListBox.Items.Count - 1;
-            }
-            messageListBox.Refresh();
-        }
-        /// <summary>
         /// Method called by the controler to update one row of cards on the table
         /// </summary>
         /// <param name="cards">The list of list of cards</param>
@@ -145,21 +131,9 @@ namespace CardGame2022
 
         #endregion
         #region Event handling
-        private void EntryTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            /*if (e.KeyCode.Equals(Keys.Enter))
-            {
-                e.SuppressKeyPress = true; // Or beep.
-                gameController.Interpret(entryTextBox.Text);
-                entryTextBox.Text = "";
-            }*/
-        }
+        
         private void MainWindow_Paint(object sender, PaintEventArgs e)
         {
-            //On garde !!!//
-            int splitX = messageListBox.Left - 10;
-            e.Graphics.DrawLine(Pens.Black, new Point(splitX, 0), new Point(splitX, Height));
-
             Rectangle haut = new Rectangle(0, 0, this.ClientSize.Width, 60);
             Rectangle bas = new Rectangle(0, this.ClientSize.Height-140, this.ClientSize.Width, 140);
             Rectangle basHaut = new Rectangle(0, this.ClientSize.Height - 280, this.ClientSize.Width, 140);

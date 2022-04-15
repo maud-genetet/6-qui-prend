@@ -44,8 +44,6 @@ namespace CardGame2022
         internal void UpdateState(List<List<int>> allRows)
         {
             List<int> scores = new List<int>();
-            mainWindow.WriteLine("All rows on the table:");
-            mainWindow.WriteLine(gameLogic.AllRowsToString(allRows));
             for (int i=0; i<allRows.Count; i++)
             mainWindow.UpdateRow(allRows);
             Boolean end = false;
@@ -69,11 +67,9 @@ namespace CardGame2022
         internal void DisplayRubberScores(List<int> playersScores)
         {
             List<String> scores = new List<String>();
-            mainWindow.WriteLine("Final scores for this rubber:");
             
             for (int i=0; i<playersScores.Count; i++)
             {
-                mainWindow.WriteLine("Player " + i + ": " + playersScores[i]);
                 scores.Add("Player " + (i + 1) + ": " + playersScores[i]);
             }
             endGame end = new endGame(scores);
@@ -94,14 +90,6 @@ namespace CardGame2022
                     AllowedInput = null;
                     gameLogic.ActOnce();
                 }
-                else
-                {
-                    mainWindow.WriteLine("Wrong number. Please enter only from " + CardsHandling.ListOfCardsToString(AllowedInput));
-                }
-            }
-            else
-            {
-                mainWindow.WriteLine("Please enter an integer.");
             }
         }
         /// <summary>
@@ -111,7 +99,6 @@ namespace CardGame2022
         internal void StartMeUp(MainWindow mainWindow)
         {
             this.mainWindow= mainWindow;
-            DisplayNewGame(gameLogic.GetNumberOfPlayers());
             gameLogic.ActOnce();
         }
         /// <summary>
@@ -120,7 +107,6 @@ namespace CardGame2022
         internal void DisplayGameOverMessage()
         {
             AllowedInput = new List<int> { 0 };
-            mainWindow.WriteLine("The game has ended.");
         }
         /// <summary>
         /// Method used to prompt player "player" to select a card from their hand
@@ -129,7 +115,6 @@ namespace CardGame2022
         internal void AskPlayerForCard(int player)
         {
             DisplayPlayerHand(player);
-            DisplayCardSelectPromptForPlayer(player);
         }
         /// <summary>
         /// Method called to display the cards selected by players
@@ -137,40 +122,19 @@ namespace CardGame2022
         /// <param name="cardsSelectedByPlayers">The cards arranged by player</param>
         internal void DisplayCardsSelected(Dictionary<int, int> cardsSelectedByPlayers)
         {
-            mainWindow.WriteLine("The selection has ended, these are the cards played:");
             List<int> cards = new List<int>(10);
             foreach (int player in cardsSelectedByPlayers.Keys)
             {
-                mainWindow.WriteLine("Player "+player+" has chosen "+ cardsSelectedByPlayers[player]);
                 cards.Add(cardsSelectedByPlayers[player]);
             }
             mainWindow.DisplayCardsAfterRubber(cards);
             gameLogic.ActOnce();
         }
-
-        /// <summary>
-        /// Method used for feedback when a card has been played (put in a row).
-        /// </summary>
-        /// <param name="card">The card played.</param>
-        /// <param name="player">Who has played.</param>
-        internal void DisplayCardPlayedByPlayer(int card, int player) => mainWindow.WriteLine("Player " + player + " plays " + card + ".");
-        /// <summary>
-        /// Method called when a player has collected a row, to display the malus update.
-        /// </summary>
-        /// <param name="malus">The malus (score change) incurred.</param>
-        /// <param name="player">The player involved.</param>
-        internal void DisplayMalusForPlayer(int malus, int player)
-        => mainWindow.WriteLine("Player " + player + " has just received a " + malus + " malus.");
-        /// <summary>
-        /// Method called when a turn has ended
-        /// </summary>
-        internal void DisplayEndOfTurnMessage() => mainWindow.WriteLine("This turn has ended.");
         /// <summary>
         /// Method called to end a rubber
         /// </summary>
         internal void DisplayRubberOver()
         {
-            mainWindow.WriteLine("End of rubber.");
             gameLogic.ActOnce();
         }
 
@@ -184,7 +148,6 @@ namespace CardGame2022
         /// <param name="player">The player involved.</param>
         internal void AskPlayerForRow(int player)
         {
-            mainWindow.WriteLine("Player " + player + ", your card is lower than all rows. Please pick a row (0-3) to collect.");
             mainWindow.DrawHandOfPlayer(new List<int>(), player, false);
         }
         #endregion
@@ -192,16 +155,9 @@ namespace CardGame2022
 
         private void DisplayPlayerHand(int player)
         {
-            mainWindow.WriteLine("Player " + player + ", this is your hand:");
-            mainWindow.WriteLine(CardsHandling.ListOfCardsToString(gameLogic.GetCurrentHandForPlayer(player)));
             List<int> cards = gameLogic.GetCurrentHandForPlayer(player);
             cards.Sort();
             mainWindow.DrawHandOfPlayer(cards, player, true);
-        }
-        private void DisplayNewGame(int numberOfPlayers) => mainWindow.WriteLine("Starting a new game with " + numberOfPlayers + " players.");
-        private void DisplayCardSelectPromptForPlayer(int i)
-        {
-            mainWindow.WriteLine("Player " + i + ", what card do you choose?");
         }
         #endregion
         #region Methods by me

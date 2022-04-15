@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.messageListBox = new System.Windows.Forms.ListBox();
-            this.entryTextBox = new System.Windows.Forms.TextBox();
             this.labelRowTable = new System.Windows.Forms.Label();
             this.labelCards1 = new System.Windows.Forms.Label();
             this.buttonRestart = new System.Windows.Forms.Button();
@@ -38,25 +36,6 @@
             this.labelScore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // messageListBox
-            // 
-            this.messageListBox.CausesValidation = false;
-            this.messageListBox.FormattingEnabled = true;
-            this.messageListBox.Location = new System.Drawing.Point(958, 50);
-            this.messageListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(8, 394);
-            this.messageListBox.TabIndex = 1;
-            // 
-            // entryTextBox
-            // 
-            this.entryTextBox.Location = new System.Drawing.Point(958, 456);
-            this.entryTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(8, 20);
-            this.entryTextBox.TabIndex = 0;
-            this.entryTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryTextBox_KeyDown);
             // 
             // labelRowTable
             // 
@@ -148,9 +127,7 @@
             this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.labelCards1);
             this.Controls.Add(this.labelRowTable);
-            this.Controls.Add(this.entryTextBox);
-            this.Controls.Add(this.messageListBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainWindow";
             this.Text = "6 nimmt! (IUT version)";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainWindow_Paint);
@@ -162,9 +139,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox messageListBox;
-        private System.Windows.Forms.TextBox entryTextBox;
         private System.Windows.Forms.Label labelRowTable;
         private System.Windows.Forms.Label labelCards1;
         private System.Windows.Forms.Button buttonRestart;
