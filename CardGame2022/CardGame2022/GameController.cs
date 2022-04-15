@@ -61,14 +61,21 @@ namespace CardGame2022
         internal void DisplayRubberScores(List<int> playersScores)
         {
             String message = "";
+            List<String> scores = new List<String>();
             mainWindow.WriteLine("Final scores for this rubber:");
             
             for (int i=0; i<playersScores.Count; i++)
             {
                 mainWindow.WriteLine("Player " + i + ": " + playersScores[i]);
                 message += "Player " + (i+1) + ": " + playersScores[i] + "\r";
+                scores.Add("Player " + (i + 1) + ": " + playersScores[i]);
             }
-            MessageBox.Show(message,"Final scores for this rubber");
+            endGame end = new endGame(scores);
+           end.ShowDialog();
+           
+           
+            // end.Show();
+            //MessageBox.Show(message,"Final scores for this rubber");
             RestartGame();
         }
         /// <summary>
