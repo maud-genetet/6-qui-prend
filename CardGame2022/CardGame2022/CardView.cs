@@ -12,7 +12,7 @@ namespace CardGame2022
     {
         public Point Position;
         public int Card;
-        public int Penalite {
+        public int Malus {
             get {
                 return CardsHandling.MalusValue(Card);
             }
@@ -28,17 +28,18 @@ namespace CardGame2022
             String s = "" + Card;
             if (Card < 10)
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 11, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 11, Position.Y + 13);
 
             } else if ( 10 <= Card && Card < 100 )
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 6, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X + 6, Position.Y + 13);
             }
             else
             {
-                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X, Position.Y + 17);
+                e.Graphics.DrawString(s, new Font("Arial", 15, FontStyle.Regular), Brushes.White, Position.X, Position.Y + 13);
             }
-
+            String s2 = "" + Malus;
+            e.Graphics.DrawString(s2, new Font("Arial", 10, FontStyle.Regular), Brushes.PeachPuff, Position.X + 15, Position.Y + 35);
         }
 
 

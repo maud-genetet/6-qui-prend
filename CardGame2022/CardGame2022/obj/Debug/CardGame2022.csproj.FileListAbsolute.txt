@@ -65,3 +65,5 @@ V:\Cours\IUT_S2\IHMProjet\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGa
 V:\Cours\IUT_S2\IHMProjet\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.exe
 V:\Cours\IUT_S2\IHMProjet\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.pdb
 \\iut.bx1\Etudiants\Home\caleflohic\Desktop\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.endGame.resources
+V:\Cours\IUT_S2\IHMProjet\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.endGame.resources
+V:\Cours\IUT_S2\IHMProjet\6-qui-prend\CardGame2022\CardGame2022\obj\Debug\CardGame2022.Menu.resources

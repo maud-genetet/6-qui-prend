@@ -18,7 +18,7 @@ namespace CardGame2022
         public static readonly int maxValue = 104;
         public static readonly int numberOfRows = 4;
         public static readonly int maxInRow = 5;
-        public static readonly int numberOfCardsInEachHand = 1;
+        public static readonly int numberOfCardsInEachHand = 10;
         private static readonly Random random = new Random();
         #endregion
         #region Public class methods for cards
@@ -30,7 +30,20 @@ namespace CardGame2022
         public static int MalusValue (int card)
         {
             int res = 1;
-            // TODO: actual malus here
+            int fin = card - (card / 10) * 10;
+            switch (fin)
+            {
+                case 0:
+                    res = 3;
+                    break;
+                case 5:
+                    res = 2;
+                    break;
+            }
+            if (fin == card / 10)
+            {
+                res += 5;
+            }
             return res;
         }
         /// <summary>

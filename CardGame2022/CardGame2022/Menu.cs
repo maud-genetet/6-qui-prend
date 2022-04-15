@@ -29,5 +29,7 @@ namespace CardGame2022
         {
             this.Close();
         }
+
+      
     }
 }

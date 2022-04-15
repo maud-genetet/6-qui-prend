@@ -43,19 +43,18 @@
             // 
             this.messageListBox.CausesValidation = false;
             this.messageListBox.FormattingEnabled = true;
-            this.messageListBox.ItemHeight = 16;
-            this.messageListBox.Location = new System.Drawing.Point(1277, 62);
-            this.messageListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.messageListBox.Location = new System.Drawing.Point(958, 50);
+            this.messageListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.messageListBox.Name = "messageListBox";
-            this.messageListBox.Size = new System.Drawing.Size(10, 484);
+            this.messageListBox.Size = new System.Drawing.Size(8, 394);
             this.messageListBox.TabIndex = 1;
             // 
             // entryTextBox
             // 
-            this.entryTextBox.Location = new System.Drawing.Point(1277, 561);
-            this.entryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.entryTextBox.Location = new System.Drawing.Point(958, 456);
+            this.entryTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.entryTextBox.Name = "entryTextBox";
-            this.entryTextBox.Size = new System.Drawing.Size(10, 22);
+            this.entryTextBox.Size = new System.Drawing.Size(8, 20);
             this.entryTextBox.TabIndex = 0;
             this.entryTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EntryTextBox_KeyDown);
             // 
@@ -63,10 +62,9 @@
             // 
             this.labelRowTable.AutoSize = true;
             this.labelRowTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRowTable.Location = new System.Drawing.Point(19, 101);
-            this.labelRowTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRowTable.Location = new System.Drawing.Point(14, 82);
             this.labelRowTable.Name = "labelRowTable";
-            this.labelRowTable.Size = new System.Drawing.Size(125, 17);
+            this.labelRowTable.Size = new System.Drawing.Size(99, 13);
             this.labelRowTable.TabIndex = 10;
             this.labelRowTable.Text = "row on the table";
             // 
@@ -75,19 +73,17 @@
             this.labelCards1.AutoSize = true;
             this.labelCards1.BackColor = System.Drawing.Color.Transparent;
             this.labelCards1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCards1.Location = new System.Drawing.Point(19, 493);
-            this.labelCards1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCards1.Location = new System.Drawing.Point(14, 401);
             this.labelCards1.Name = "labelCards1";
-            this.labelCards1.Size = new System.Drawing.Size(112, 17);
+            this.labelCards1.Size = new System.Drawing.Size(87, 13);
             this.labelCards1.TabIndex = 11;
             this.labelCards1.Text = "cards player 1";
             // 
             // buttonRestart
             // 
-            this.buttonRestart.Location = new System.Drawing.Point(1014, 21);
-            this.buttonRestart.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRestart.Location = new System.Drawing.Point(760, 17);
             this.buttonRestart.Name = "buttonRestart";
-            this.buttonRestart.Size = new System.Drawing.Size(100, 28);
+            this.buttonRestart.Size = new System.Drawing.Size(75, 23);
             this.buttonRestart.TabIndex = 15;
             this.buttonRestart.Text = "Restart";
             this.buttonRestart.UseVisualStyleBackColor = true;
@@ -95,10 +91,9 @@
             // 
             // QuitButton
             // 
-            this.QuitButton.Location = new System.Drawing.Point(1131, 21);
-            this.QuitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.QuitButton.Location = new System.Drawing.Point(848, 17);
             this.QuitButton.Name = "QuitButton";
-            this.QuitButton.Size = new System.Drawing.Size(100, 28);
+            this.QuitButton.Size = new System.Drawing.Size(75, 23);
             this.QuitButton.TabIndex = 16;
             this.QuitButton.Text = "Quitter";
             this.QuitButton.UseVisualStyleBackColor = true;
@@ -109,9 +104,10 @@
             this.labelPlayers.AutoSize = true;
             this.labelPlayers.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPlayers.Location = new System.Drawing.Point(76, 21);
+            this.labelPlayers.Location = new System.Drawing.Point(57, 9);
+            this.labelPlayers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPlayers.Name = "labelPlayers";
-            this.labelPlayers.Size = new System.Drawing.Size(53, 16);
+            this.labelPlayers.Size = new System.Drawing.Size(41, 13);
             this.labelPlayers.TabIndex = 17;
             this.labelPlayers.Text = "Players";
             // 
@@ -120,9 +116,10 @@
             this.labelScore.AutoSize = true;
             this.labelScore.BackColor = System.Drawing.Color.Transparent;
             this.labelScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelScore.Location = new System.Drawing.Point(76, 47);
+            this.labelScore.Location = new System.Drawing.Point(57, 38);
+            this.labelScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(50, 16);
+            this.labelScore.Size = new System.Drawing.Size(40, 13);
             this.labelScore.TabIndex = 18;
             this.labelScore.Text = "Scores";
             // 
@@ -131,20 +128,19 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 664);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 540);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 17);
+            this.label1.Size = new System.Drawing.Size(141, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "Cards played by players";
             // 
             // MainWindow
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1283, 820);
+            this.ClientSize = new System.Drawing.Size(962, 666);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.labelPlayers);
@@ -154,7 +150,7 @@
             this.Controls.Add(this.labelRowTable);
             this.Controls.Add(this.entryTextBox);
             this.Controls.Add(this.messageListBox);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
             this.Text = "6 nimmt! (IUT version)";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainWindow_Paint);

@@ -38,7 +38,7 @@
             this.partieTermineeLabel.AutoSize = true;
             this.partieTermineeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partieTermineeLabel.ForeColor = System.Drawing.Color.Coral;
-            this.partieTermineeLabel.Location = new System.Drawing.Point(308, 87);
+            this.partieTermineeLabel.Location = new System.Drawing.Point(90, 58);
             this.partieTermineeLabel.Name = "partieTermineeLabel";
             this.partieTermineeLabel.Size = new System.Drawing.Size(131, 20);
             this.partieTermineeLabel.TabIndex = 0;
@@ -47,7 +47,7 @@
             // listBoxScorePlayers
             // 
             this.listBoxScorePlayers.FormattingEnabled = true;
-            this.listBoxScorePlayers.Location = new System.Drawing.Point(312, 144);
+            this.listBoxScorePlayers.Location = new System.Drawing.Point(79, 115);
             this.listBoxScorePlayers.Name = "listBoxScorePlayers";
             this.listBoxScorePlayers.Size = new System.Drawing.Size(153, 186);
             this.listBoxScorePlayers.TabIndex = 1;
@@ -55,7 +55,7 @@
             // RestartButton
             // 
             this.RestartButton.BackColor = System.Drawing.Color.Firebrick;
-            this.RestartButton.Location = new System.Drawing.Point(331, 358);
+            this.RestartButton.Location = new System.Drawing.Point(94, 351);
             this.RestartButton.Name = "RestartButton";
             this.RestartButton.Size = new System.Drawing.Size(108, 42);
             this.RestartButton.TabIndex = 3;
@@ -68,12 +68,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(310, 450);
             this.Controls.Add(this.RestartButton);
             this.Controls.Add(this.listBoxScorePlayers);
             this.Controls.Add(this.partieTermineeLabel);
             this.Name = "endGame";
-            this.Text = "s";
+            this.Text = "Final Scores";
             this.ResumeLayout(false);
             this.PerformLayout();
 
