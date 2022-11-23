@@ -2,9 +2,9 @@
 
 # Sommaire
 
-* 1 [Présentation](#1)
-* 2 [Outils Utilisés](#2)
-* 3 [Résultats](#3)
+1. [Présentation](#1)
+2. [Outils Utilisés](#2)
+3. [Résultats](#3)
 
 <h1 id="1">1. Présentation</h1>
 
