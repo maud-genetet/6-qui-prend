@@ -17,7 +17,9 @@ Application reprenant le jeu 6 qui prend.
 <h1 id="3">3. Résultats</h1>
 
 Menu du Jeu
+<br>
 ![menu](images/menu.png "menu")
 
 Visuel d'une partie en cours
+<br>
 ![partie](images/partie.png "partie")
